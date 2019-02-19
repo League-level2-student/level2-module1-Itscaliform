@@ -35,7 +35,9 @@ public class GuestBook implements ActionListener {
 
 	@Override	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
-		
+		if(arg0.getSource()==button) {
+			JOptionPane.showInputDialog(null,"give me yo name SONNNN!!");
+		}
 	}
 	
 	// When the add name button is clicked, display an input dialog that asks the user to enter a name. Add
