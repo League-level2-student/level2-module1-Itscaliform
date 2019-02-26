@@ -19,11 +19,12 @@ public class GuestBook implements ActionListener {
 		frame = new JFrame();
 		panel = new JPanel();
 		button = new JButton("add name");
-		button = new JButton("View Names");
+		button2 = new JButton("View Names");
 		frame.add(panel);
 		panel.add(button);
 		panel.add(button2);
 		button.addActionListener(this);
+		button2.addActionListener(this);
 		frame.pack();
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -32,11 +33,36 @@ public class GuestBook implements ActionListener {
 	public static void main(String[] args) {
 		new GuestBook().CreateUI();
 	}
-
+	String[] bob = new String[10];
+	int b=0;
+	int c=0;
+	String[] longy= new String[10];
+	 String lonyer;
 	@Override	public void actionPerformed(ActionEvent arg0) {
+		
 		// TODO Auto-generated method stub
 		if(arg0.getSource()==button) {
-			JOptionPane.showInputDialog(null,"give me yo name SONNNN!!");
+			b = b+1;
+		
+  bob[b] = JOptionPane.showInputDialog(null,"give me yo name SONNNN!!");
+		}
+		
+		if(arg0.getSource()==button2) {
+			for(int i=0; i<b; i++) {
+				c=c+1;
+				 longy[c] = " Guest # " + c + " :" + bob[c];
+				 
+				 for( i=0; i<longy.length; i++) {
+					 lonyer = longy.length ;
+				 
+				 
+						}
+			//	if (b>1) {
+			//		JOptionPane.showMessageDialog(null, " Guest #" + c + ":" + bob[c]);
+				//}
+			JOptionPane.showMessageDialog(null, lonyer );
+			
+			
 		}
 	}
 	
